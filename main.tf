@@ -18,7 +18,7 @@ terraform {
 
 provider "azurerm" {
   features {}
-  use_oidc = false
+  use_oidc = true
 }
 
 # Define any Azure resources to be created here. A simple resource group is shown here as a minimal example.
