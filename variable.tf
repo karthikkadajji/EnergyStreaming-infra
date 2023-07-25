@@ -8,23 +8,10 @@ variable "application_rg" {
   default     = "energy-stream"
 }
 
-variable backend_resource_group_name {
-  description = "The resource group of backend terraform"
-  default     = "infra-rg"
-}
-variable backend_storage_account_name {
-  description = "The storage accnt of backend terraform"
-
-  default = "terraformgithubstg"
+variable "eventhub_namespace_name" {
+  default = "energy"
 }
 
-variable "backend_container_name" {
-  description = "The containername backend terraform"
-  default     = "tfstate"
-
-}
-
-variable "backend_key" {
-  description = "The containername backend terraform"
-  default     = "terraform.tfstate"
+variable "eventhub_name" {
+  default = "energy_streaming"
 }

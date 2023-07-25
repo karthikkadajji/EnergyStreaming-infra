@@ -8,10 +8,10 @@ terraform {
 
   # Update this block with the location of your terraform state
   backend "azurerm" {
-    resource_group_name  = var.backend_resource_group_name
-    storage_account_name = var.backend_storage_account_name
-    container_name       = var.backend_container_name
-    key                  = var.backend_key
+    resource_group_name  = "infra-rg"
+    storage_account_name = "terraformgithubstg"
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
     use_oidc             = true
   }
 }
