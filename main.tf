@@ -8,6 +8,10 @@ resource "azurerm_eventhub_namespace" "energy_application_eventhub_ns" {
   location            = azurerm_resource_group.energy_application_rg.location
   resource_group_name = azurerm_resource_group.energy_application_rg.name
   sku                 = "Standard"
+  timeouts {
+    create = "10m"
+    delete = "10m"
+  }
 }
 
 resource "azurerm_eventhub" "energy_application_eventhub" {
