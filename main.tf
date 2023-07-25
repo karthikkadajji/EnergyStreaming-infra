@@ -1,4 +1,3 @@
-# Define any Azure resources to be created here. A simple resource group is shown here as a minimal example.
 resource "azurerm_resource_group" "energy_application_rg" {
   name     = var.application_rg
   location = var.location
@@ -11,7 +10,6 @@ resource "azurerm_eventhub_namespace" "energy_application_eventhub_namespace" {
   sku                 = "Standard"  # Change to your desired SKU (Standard, Basic, etc.)
 }
 
-# Create an Event Hub within the namespace
 resource "azurerm_eventhub" "energy_application_eventhub" {
   name                = var.eventhub_name
   namespace_name      = azurerm_eventhub_namespace.energy_application_eventhub_namespace.name
