@@ -9,9 +9,9 @@ variable "application_rg" {
 }
 
 variable "eventhub_namespace_name" {
-  default = "energy"
+  default = "energy-application-eh-ns"
 }
 
 variable "eventhub_name" {
-  default = "energy_streaming"
+  default = "energy-application-eventhub"
 }
