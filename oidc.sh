@@ -8,4 +8,4 @@ sp_create_output=$( az ad sp create --id $client_id)
 assigneeObjectId=$(echo $sp_create_output| jq -r '.id')
 roleAssignment=$(az role assignment create --role contributor --subscription $subscriptionId --assignee-object-id  $assigneeObjectId --assignee-principal-type ServicePrincipal --scope /subscriptions/$subscriptionId/resourceGroups/$resourceGroupName)
 
-echo "set federated credentials in azure portal"
+echo "set federated credentials in azure portal "
