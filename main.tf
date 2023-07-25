@@ -28,7 +28,7 @@ provider "azurerm" {
 #}
 
 resource "azurerm_storage_account" "stgkarthikdp203" {
-  name                     = var.resource_group_name
+  name                     = "testprojengersdfkj"
   resource_group_name      = "infra-rg"
   location                 = "westeurope"
   account_tier             = "Standard"
