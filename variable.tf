@@ -5,7 +5,7 @@ variable "location" {
 
 variable "application_rg" {
   description = "The resource group for the streaming application and storage"
-  default     = "energy-stream"
+  default     = "energy-stream-rg"
 }
 
 variable "eventhub_namespace_name" {
