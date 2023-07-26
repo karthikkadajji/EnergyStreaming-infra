@@ -28,3 +28,7 @@ variable "storage_account_name" {
   default     = "energy-streaming-application"
 }
 
+variable "destination_container" {
+  description = "name of the container"
+  default     = "datafactory-energy"
+}
