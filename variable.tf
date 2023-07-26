@@ -15,7 +15,7 @@ variable "eventhub_namespace_name" {
 
 variable "eventhub_name" {
   description = "Name of the Azure event hub."
-  default = "energy-application-eventhub"
+  default     = "energy-application-eventhub"
 }
 
 variable "data_factory_name" {
