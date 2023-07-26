@@ -15,3 +15,12 @@ variable "eventhub_namespace_name" {
 variable "eventhub_name" {
   default = "energy-application-eventhub"
 }
+
+variable "data_factory_name" {
+  description = "Name of the Azure Data Factory."
+}
+
+variable "storage_account_name" {
+  description = "Name of the Azure Storage Account"
+  default = "energy_streaming_application"
+}
