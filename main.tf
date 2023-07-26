@@ -43,10 +43,10 @@ resource "azurerm_storage_container" "container_energy_stream" {
 }
 
 module "datafactory" {
-  source               = "./modules/datafactory"
-  data_factory_name      = var.data_factory_name
-  location             = var.location
+  source                = "./modules/datafactory"
+  data_factory_name     = var.data_factory_name
+  location              = var.location
   resource_group_name   = azurerm_resource_group.energy_application_rg.name
   destination_container = azurerm_storage_container.container_energy_stream.name
-  storage_account_id = azurerm_storage_account.storage_account.name
+  storage_account_id    = azurerm_storage_account.storage_account.name
 }
