@@ -9,15 +9,19 @@ variable "application_rg" {
 }
 
 variable "eventhub_namespace_name" {
-  default = "energy-application-eh-ns"
+  description = "event hub namespace"
+  default     = "energy-application-eh-ns"
 }
 
 variable "eventhub_name" {
+  description = "Name of the Azure event hub."
+
   default = "energy-application-eventhub"
 }
 
 variable "data_factory_name" {
   description = "Name of the Azure Data Factory."
+  default     = "energy_data_factory"
 }
 
 variable "storage_account_name" {
