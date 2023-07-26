@@ -36,3 +36,11 @@ resource "azurerm_eventhub" "energy_application_eventhub" {
   depends_on          = [azurerm_eventhub_namespace.energy_application_eventhub_ns]
 }
 
+module "datafactory" {
+  source                = "./modules/datafactory"
+  data_factory_name     = var.data_factory_name
+  location              = var.location
+  resource_group_name   = azurerm_resource_group.energy_application_rg.name
+  storage_account_id    = azurerm_storage_account.storage_account.name
+  destination_container = var.destination_container
+}
