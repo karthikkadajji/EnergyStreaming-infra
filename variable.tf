@@ -25,7 +25,7 @@ variable "data_factory_name" {
 
 variable "storage_account_name" {
   description = "Name of the Azure Storage Account"
-  default     = "energystreamingapplication"
+  default     = "energystreamapplication"
 }
 
 variable "destination_container" {
