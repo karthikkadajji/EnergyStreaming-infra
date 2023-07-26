@@ -16,7 +16,7 @@ resource "azurerm_eventhub_namespace" "energy_application_eventhub_ns" {
 
 resource "azurerm_storage_account" "storage_account" {
   name                     = var.storage_account_name
-  resource_group_name      = azurerm_resource_group.energy_application_rg
+  resource_group_name      = azurerm_resource_group.energy_application_rg.name
   location                 = var.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
