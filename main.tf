@@ -88,11 +88,16 @@ resource "azurerm_function_app" "example" {
   os_type                    = "linux"
   version                    = "~4"
 
-  app_settings {
-    FUNCTIONS_WORKER_RUNTIME = "python"
+  site_config {
+    linux_fx_version = "PYTHON|3.7"
+    use_32_bit_worker_process = false
   }
 
-  site_config {
-    linux_fx_version = "python|3.9"
+  identity {
+    type = "SystemAssigned"
+  }
+
+  app_settings = {
+    "FUNCTIONS_WORKER_RUNTIME"   = "python"
   }
 }
