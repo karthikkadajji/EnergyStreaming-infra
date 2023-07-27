@@ -89,7 +89,7 @@ resource "azurerm_function_app" "example" {
   version                    = "~4"
 
   site_config {
-    linux_fx_version = "PYTHON|3.7"
+    linux_fx_version          = "PYTHON|3.7"
     use_32_bit_worker_process = false
   }
 
@@ -98,6 +98,6 @@ resource "azurerm_function_app" "example" {
   }
 
   app_settings = {
-    "FUNCTIONS_WORKER_RUNTIME"   = "python"
+    "FUNCTIONS_WORKER_RUNTIME" = "python"
   }
 }
