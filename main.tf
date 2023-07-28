@@ -110,14 +110,14 @@ resource "azurerm_key_vault" "my_key_vault" {
   location            = azurerm_resource_group.energy_application_rg.location
   resource_group_name = azurerm_resource_group.energy_application_rg.name
 
-  sku_name = "standard"
+  sku_name  = "standard"
   tenant_id = data.azurerm_client_config.current.tenant_id
 }
 
 resource "azurerm_key_vault_access_policy" "function_app_policy" {
-  key_vault_id = azurerm_key_vault.my_key_vault.id
-  tenant_id = data.azurerm_client_config.current.tenant_id
-  object_id = azurerm_function_app.fun_app.identity[0].principal_id
+  key_vault_id       = azurerm_key_vault.my_key_vault.id
+  tenant_id          = data.azurerm_client_config.current.tenant_id
+  object_id          = azurerm_function_app.fun_app.identity[0].principal_id
   secret_permissions = ["get"]
 }
 
