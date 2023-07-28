@@ -35,5 +35,5 @@ variable "destination_container" {
 
 variable "key_vault_name" {
   description = "Name of key vault"
-  default = "energy-poc-vault"
+  default     = "energy-poc-vault"
 }
