@@ -67,8 +67,8 @@ resource "azurerm_app_service_plan" "example" {
   reserved            = false
 
   sku {
-    tier = "Free"
-    size = "F1"
+    tier = "Standard"
+    size = "S1"
   }
 
   lifecycle {
@@ -87,9 +87,13 @@ resource "azurerm_function_app" "example" {
   storage_account_access_key = azurerm_storage_account.example.primary_access_key
   os_type                    = "linux"
   version                    = "~4"
+  #publish_content {
+  #  source_uri = "https://github.com/<user>/<repo>/archive/<branch>.zip"
+  #  type       = "zip"
+  #}
 
   site_config {
-    linux_fx_version          = "PYTHON|3.10"
+    linux_fx_version          = "PYTHON|3.7"
     use_32_bit_worker_process = false
   }
 
@@ -101,3 +105,4 @@ resource "azurerm_function_app" "example" {
     "FUNCTIONS_WORKER_RUNTIME" = "python"
   }
 }
+
