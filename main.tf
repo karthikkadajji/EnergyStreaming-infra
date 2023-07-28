@@ -87,7 +87,7 @@ resource "azurerm_function_app" "fun_app" {
   storage_account_access_key = azurerm_storage_account.example.primary_access_key
   os_type                    = "linux"
   version                    = "~4"
-  #publish_content {
+  #publish_content{
   #  source_uri = "https://github.com/<user>/<repo>/archive/<branch>.zip"
   #  type       = "zip"
   #}
