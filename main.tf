@@ -105,8 +105,8 @@ resource "azurerm_function_app" "fun_app" {
     "FUNCTIONS_WORKER_RUNTIME" = "python"
   }
 }
-resource "azurerm_key_vault" "my_key_vault" {
-  name                = "my-key-vault"
+resource "azurerm_key_vault" "key_vault_name" {
+  name                = var.key_vault_name
   location            = azurerm_resource_group.energy_application_rg.location
   resource_group_name = azurerm_resource_group.energy_application_rg.name
 

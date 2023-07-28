@@ -32,3 +32,8 @@ variable "destination_container" {
   description = "name of the container"
   default     = "datafactory-energy"
 }
+
+variable "key_vault_name" {
+  description = "Name of key vault"
+  default = "energy-poc-vault"
+}
