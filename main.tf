@@ -64,11 +64,11 @@ resource "azurerm_app_service_plan" "example" {
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   kind                = "Linux"
-  reserved            = true
+  reserved            = false
 
   sku {
-    tier = "Dynamic"
-    size = "Y1"
+    tier = "Free"
+    size = "F1"
   }
 
   lifecycle {
@@ -89,7 +89,7 @@ resource "azurerm_function_app" "example" {
   version                    = "~4"
 
   site_config {
-    linux_fx_version          = "PYTHON|3.7"
+    linux_fx_version          = "PYTHON|3.10"
     use_32_bit_worker_process = false
   }
 
