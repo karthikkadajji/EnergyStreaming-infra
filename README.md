@@ -1,4 +1,4 @@
 # EnergyStreaming
 
 Note
-perform registration for data factory in your subscription 
+perform registration for data factory, keyvalut, web in your subscription 
