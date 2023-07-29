@@ -6,7 +6,7 @@ terraform {
     }
   }
 
-  # Update this block with the location  of your terraform state
+  # Update this block with the location   of your terraform state
   backend "azurerm" {
     resource_group_name  = "infra-rg"
     storage_account_name = "terraformgithubstg"
