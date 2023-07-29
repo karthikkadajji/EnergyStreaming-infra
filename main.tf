@@ -79,7 +79,7 @@ resource "azurerm_app_service_plan" "example" {
 }
 
 resource "azurerm_function_app" "fun_app" {
-  name                       = "example-azure-kktestdeletedfsodi"
+  name                       = "energy-stream-func"
   location                   = azurerm_resource_group.example.location
   resource_group_name        = azurerm_resource_group.example.name
   app_service_plan_id        = azurerm_app_service_plan.example.id
