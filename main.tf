@@ -60,7 +60,7 @@ resource "azurerm_storage_account" "example" {
 }
 
 resource "azurerm_app_service_plan" "example" {
-  name                = "azure-functions-example-sp"
+  name                = "energy-stream-sp"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   kind                = "Linux"
