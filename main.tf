@@ -84,10 +84,10 @@ resource "azurerm_function_app" "fun_app" {
   os_type                    = "linux"
   version                    = "~4"
 
-  #publish_content{
-  #  source_uri = "https://github.com/<user>/<repo>/archive/<branch>.zip"
-  #  type       = "zip"
-  #}
+  publish_content{
+    source_uri = "https://github.com/karthikkadajji/Energystreaming-app/archive/main.zip"
+    type       = "zip"
+  }
 
   site_config {
     linux_fx_version          = "PYTHON|3.7"
