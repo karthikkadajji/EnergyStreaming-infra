@@ -118,11 +118,11 @@ resource "azurerm_key_vault_access_policy" "function_app_policy" {
   secret_permissions = ["Get"]
 }
 
-resource "azurerm_role_assignment" "eventhub_role_assignment" {
-  scope                = azurerm_eventhub.energy_application_eventhub.id
-  role_definition_name = "Azure Event Hubs Data Sender"
-  principal_id         = azurerm_function_app.fun_app.identity[0].principal_id
-}
+#resource "azurerm_role_assignment" "eventhub_role_assignment" {
+#  scope                = azurerm_eventhub.energy_application_eventhub.id
+#  role_definition_name = "Azure Event Hubs Data Sender"
+#  principal_id         = azurerm_function_app.fun_app.identity[0].principal_id
+#}
 
 data "azurerm_client_config" "current" {}
 
